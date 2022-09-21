@@ -334,7 +334,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
     android.frameworks.sensorservice@1.0.vendor \
     sensors.dynamic_sensor_hal \
-    sensors.moto_ext
+    sensors.mumba
 
 PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_parrot/android.hardware.sensor.accelerometer.xml \
@@ -349,7 +349,7 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.sensor.hifi_sensors.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_parrot/android.hardware.sensor.hifi_sensors.xml
 
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+        $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
