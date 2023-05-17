@@ -428,3 +428,6 @@ ro.config.vc_call_vol_steps=8
 
 # Wi-Fi Display
 persist.sys.wfd.virtual=0
+
+# ZRAM
+ro.vendor.zram.swapon=true

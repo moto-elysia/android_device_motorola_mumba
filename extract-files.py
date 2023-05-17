@@ -160,6 +160,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/soundfx/libswspatializeraidl.so',
     ): blob_fixup()
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
+    'vendor/bin/init.kernel.post_boot.sh': blob_fixup()
+        .regex_replace('ro.boot.using_zram_from_fstab', 'ro.vendor.zram.swapon'),
 } # fmt: skip
 
 extract_fns: extract_fns_user_type = {
