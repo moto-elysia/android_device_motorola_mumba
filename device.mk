@@ -244,7 +244,8 @@ PRODUCT_PACKAGES += \
     LineageSystemUIMumba \
     DolbyFrameworksResMumba \
     SettingsResMumba \
-    TelephonyResMumba
+    TelephonyResMumba \
+    DeviceAsWebcamResMumba
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
