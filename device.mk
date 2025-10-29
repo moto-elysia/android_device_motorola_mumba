@@ -237,7 +237,6 @@ PRODUCT_PACKAGES += \
     SystemUIResMumba \
     WifiResMumba \
     FrameworksResMumba \
-    LineageSystemUIMumba \
     DolbyFrameworksResMumba \
     SettingsResMumba \
     TelephonyResMumba \
