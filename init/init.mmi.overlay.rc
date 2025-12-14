@@ -166,15 +166,6 @@ service vendor.capsense_reset /vendor/bin/capsense_reset
    group system input
    disabled
 
-service vendor.mmi-cap-sh /vendor/bin/init.mmi.cap.sh
-    class core
-    user root
-    oneshot
-
-service vendor.mot_vsync_psd /vendor/bin/motpsd
-    class late_start
-    user root
-
 on property:sys.boot_completed=1
     start vendor.capsense_reset
     #change adsp pmic test command file access permission
@@ -209,12 +200,6 @@ on property:sys.boot_completed=1
 
     write /proc/sys/vm/dirty_background_bytes 26214400
     write /proc/sys/vm/dirty_bytes 104857600
-
-service vendor.modem-rfs-sh /vendor/bin/init.mmi.modem-rfs.sh loop_forever
-    class late_start
-    user root
-    group log system radio
-    oneshot
 
 on property:sys.boot_completed=1 && property:ro.vendor.build.motfactory=1
     # Change force_charging_enable access mode and permission for tcmd

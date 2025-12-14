@@ -70,7 +70,6 @@ on early-init
 on fs
     insmod /vendor/lib/modules/cci_intf.ko
     mkdir /mnt/vendor/persist/fps 0770 system system
-    exec_start vendor.ident-fps-sh
 
 on fs && property:ro.vendor.hw.modem_version=*
     # Super modem detection
@@ -542,12 +541,6 @@ on property:sys.boot_completed=1 && property:ro.boot.mmi.bootlog=true
     stop mmi-bootlog-logcat
     stop mmi-bootlog
 
-service vendor.hw_revs /vendor/bin/hardware_revisions.sh
-    class late_start
-    user system
-    group system
-    oneshot
-
 service vendor.mmi-touch-sh /vendor/bin/init.mmi.touch.sh
     class core
     user root
@@ -573,13 +566,6 @@ service vendor.oem-hw-sh /vendor/bin/init.oem.hw.sh
 service vendor.oem-super-image-detector-sh /vendor/bin/init.oem.hw.sh -M
     class core
     user root
-    oneshot
-    disabled
-
-service vendor.ident-fps-sh /vendor/bin/init.oem.fingerprint.sh
-    class core
-    user root
-    group drmrpc system
     oneshot
     disabled
 
@@ -658,27 +644,6 @@ on property:vendor.wifi.tethering=false
 
 on property:vendor.wifi.tethering=true
     write /sys/module/wlan/parameters/sar_mhs enabled
-
-# Override the AOSP sensor HAL service definition
-# from hardware/interfaces/sensors/2.0/multihal
-# to add input and uhid group access
-service vendor.sensors-hal-2-0-multihal /vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
-    class hal
-    user system
-    group system wakelock context_hub input uhid
-    writepid /dev/cpuset/system-background/tasks
-    capabilities BLOCK_SUSPEND
-    rlimit rtprio 10 10
-
-# from hardware/interfaces/sensors/2.1/multihal
-# to add input and uhid group access
-service vendor.sensors-hal-2-1-multihal /vendor/bin/hw/android.hardware.sensors@2.1-service.multihal
-    class hal
-    user system
-    group system wakelock context_hub input uhid
-    writepid /dev/cpuset/system-background/tasks
-    capabilities BLOCK_SUSPEND
-    rlimit rtprio 10 10
 
 # from hardware/interfaces/sensors/aidl/multihal
 # to add input and uhid group access
