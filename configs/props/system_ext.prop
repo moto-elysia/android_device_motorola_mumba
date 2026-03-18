@@ -39,9 +39,6 @@ persist.vendor.dpm.feature=11
 persist.backup.ntpServer=0.pool.ntp.org
 
 # IMS
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
-persist.dbg.wfc_avail_ovr=1
 ro.qcom.ims.use_moto_vt_ext=true
 persist.vendor.vonr_setting_support=1
 
