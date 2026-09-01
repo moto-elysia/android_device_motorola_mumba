@@ -31,6 +31,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# ViPER4Android
+PRODUCT_PACKAGES += \
+    ViPER4Android
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
@@ -45,6 +49,7 @@ PRODUCT_PACKAGES += \
     libaudiochargerlistener \
     libbatterylistener \
     libfmpal \
+    libv4a_aidl \
     libhfp_pal \
     libmediautils_vendor.vendor \
     libmemunreachable.vendor \
@@ -218,11 +223,13 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom.zram \
     fstab.qcom.vendor_ramdisk \
+    init.v4a.sh \
     init.mmi.chipset.rc \
     init.target.rc \
     init.mmi.overlay.rc \
     init.qcom.rc \
     init.dolby.rc \
+    init.viper.rc \
     init.vendor.st21nfc.rc \
     init.mmi.rc \
     init.qcom.recovery.rc \

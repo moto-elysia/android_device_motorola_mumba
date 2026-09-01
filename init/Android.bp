@@ -86,3 +86,16 @@ prebuilt_etc {
     sub_dir: "init",
     soc_specific: true
 }
+
+prebuilt_etc {
+    name: "init.viper.rc",
+    src: "init.viper.rc",
+    sub_dir: "init",
+    soc_specific: true
+}
+
+sh_binary {
+    name: "init.v4a.sh",
+    src: "init.v4a.sh",
+    vendor: true,
+}

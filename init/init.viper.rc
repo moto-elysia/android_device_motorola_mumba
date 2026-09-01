@@ -1,0 +1,3 @@
+    # ViPER4Android AIDL shared-memory channel
+    mkdir /data/vendor/audiox 0777 audioserver audio
+    exec u:r:vendor_init:s0 -- /vendor/bin/sh /vendor/bin/init.v4a.sh
