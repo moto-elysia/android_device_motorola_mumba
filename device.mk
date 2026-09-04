@@ -135,6 +135,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti.recovery
 
 # Camera
+$(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
+
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor
 
@@ -508,3 +510,4 @@ PRODUCT_PACKAGES += \
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/motorola/mumba/mumba-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/mumba-motcamera/mumba-motcamera-vendor.mk)
