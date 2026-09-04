@@ -389,6 +389,25 @@ ro.vendor.qspm.enable=true
 # MOTO
 persist.vendor.motosxf.enable=true
 
+# Dolby
+ro.audio.spatializer_enabled=true
+persist.vendor.audio.effectimplenter=dolby
+persist.vendor.audio_fx.current=dolby
+ro.vendor.dolby.dax.version=DAX3_3.12.0.8_r1
+persist.vendor.audio.dolby.tws_tuning=true
+audio.spatializer.effect.util_clamp_min=300
+ro.audio.spatializer_enabled=true
+ro.audio.headtracking_enabled=true
+ro.audio.spatializer_transaural_enabled_default=false
+ro.audio.stereo_spatialization_enabled=true
+persist.vendor.audio.spatializer.speaker_enabled=true
+vendor.audio.c2.preferred=true
+debug.c2.use_dmabufheaps=1
+vendor.qc2audio.suspend.enabled=true
+vendor.qc2audio.per_frame.flac.dec.enabled=true
+vendor.audio.dolby.ds2.hardbypass=false
+vendor.audio.dolby.ds2.enabled=false
+
 # QCOMSYSD
 persist.vendor.qcomsysd.enabled=1
 persist.vendor.qc.sub.rdump.max=0
