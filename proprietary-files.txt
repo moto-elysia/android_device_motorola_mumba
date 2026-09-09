@@ -920,6 +920,7 @@ vendor/bin/init.mmi.modem-rfs.sh
 vendor/bin/init.mmi.shutdown.sh
 vendor/bin/init.mmi.usb.sh
 vendor/bin/init.mmi.wlan-getlogs.sh
+vendor/bin/pstore_annotate.sh
 vendor/bin/init.qcom.coex.sh
 vendor/bin/init.qcom.efs.sync.sh
 vendor/bin/init.qcom.sdio.sh
