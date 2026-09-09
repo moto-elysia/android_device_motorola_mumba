@@ -243,7 +243,9 @@ PRODUCT_PACKAGES += \
     DeviceAsWebcamResMumba \
     LineageSettingsProviderMumba \
     LineageApertureAppMumba \
-    LineageSdkMumba
+    LineageSdkMumba \
+    NfcResMumba
+
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
