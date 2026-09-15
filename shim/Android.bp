@@ -1,0 +1,14 @@
+cc_library_shared {
+    name: "lib-imsvt-shim",
+    system_ext_specific: true,
+
+    srcs: [
+        "libdmabufheap_shim.cpp",
+    ],
+
+    shared_libs: [
+        "libdmabufheap",
+    ],
+
+    stl: "libc++",
+}
