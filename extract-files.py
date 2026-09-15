@@ -155,6 +155,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     'vendor/bin/init.kernel.post_boot.sh': blob_fixup()
         .regex_replace('ro.boot.using_zram_from_fstab', 'ro.vendor.zram.swapon'),
+    'system_ext/lib64/lib-imsvt.so': blob_fixup()
+        .add_needed('lib-imsvt-shim.so')
 } # fmt: skip
 
 extract_fns: extract_fns_user_type = {
