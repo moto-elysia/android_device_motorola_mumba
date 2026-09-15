@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Motorola Moto g57 power (mumba) (16 W1WAAS36.48-12-40-4).
+## are from Motorola Moto g57 power (mumba) (17 A171WAAM-A171-ST2.1).
 ## variant: RETIN
 
 # ACDB Data
@@ -484,6 +484,14 @@ vendor/lib64/camera/com.qti.tuned.mot_mumbai_sc820cs.bin
 vendor/lib64/camera/com.qti.tuned.mot_mumbai_sc820cs_4g.bin
 
 # CNE
+system_ext/framework/vendor.qti.data.factoryservice-V2-java.jar
+system_ext/framework/vendor.qti.data.factoryservice-V3-java.jar
+system_ext/framework/vendor.qti.hardware.data.cneaidlservice.internal.api-V2-java.jar
+system_ext/framework/vendor.qti.hardware.data.cneaidlservice.internal.server-V2-java.jar
+system_ext/lib64/vendor.qti.data.factoryservice-V2-ndk.so
+system_ext/lib64/vendor.qti.data.factoryservice-V3-ndk.so
+system_ext/lib64/vendor.qti.hardware.data.cneaidlservice.internal.api-V2-ndk.so
+system_ext/lib64/vendor.qti.hardware.data.cneaidlservice.internal.server-V2-ndk.so
 vendor/app/CACertService/CACertService.apk
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
 vendor/app/IWlanService/IWlanService.apk
@@ -653,6 +661,7 @@ vendor/lib64/libcolor-default.so
 vendor/lib64/libdisp-aba.so
 
 # Fingerprint
+system_ext/apex/com.android.hardware.biometrics.fingerprint.virtual.apex
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service-jv
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service.fpc;DISABLE_DEPS
 vendor/bin/hw/fpc_ident
@@ -759,6 +768,9 @@ vendor/etc/init/android.hardware.gatekeeper-service-qti.rc
 vendor/lib64/hw/libqtigatekeeper.so
 
 # GNSS
+system/lib64/vendor.qti.gnss-V8-cpp.so
+system_ext/bin/loc_sys_service
+system_ext/etc/init/loc_sys_service.rc
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
@@ -891,6 +903,7 @@ vendor/etc/vintf/manifest/manifest_identity_credential.xml
 vendor/lib64/libqtiidentitycredential.so
 
 # Init
+system_ext/bin/frameworks_utils_service.sh
 vendor/bin/init.class_main.sh
 vendor/bin/init.kernel.post_boot-parrot.sh
 vendor/bin/init.kernel.post_boot-ravelin.sh
@@ -968,6 +981,7 @@ vendor/lib64/libnativecospatchkernel-thales.so
 vendor/lib64/libnativecosupdateapi-thales.so
 
 # NFC
+system_ext/etc/init/init.nxp.nfc.rc
 vendor/etc/init/nfc-service-st.rc
 vendor/etc/libnfc-hal-st-prc.conf
 vendor/etc/libnfc-hal-st.conf
@@ -1126,6 +1140,9 @@ vendor/etc/dolby/dax-default_retin.xml
 vendor/etc/dolby/dax-moto_1.xml
 vendor/etc/dolby/dax-moto_2.xml
 vendor/etc/dolby/dax-moto_3.xml
+vendor/etc/dolby/dax-moto_4.xml
+vendor/etc/dolby/dax-moto_5.xml
+vendor/etc/dolby/dax-moto_6.xml
 vendor/etc/init/dms-service.rc
 vendor/etc/media_codecs_dolby_audio.xml
 vendor/etc/init/vendor.dolby.media.c2-default-service-dax.rc
@@ -1145,8 +1162,10 @@ vendor/lib64/libdapparamstorage.so
 vendor/lib64/soundfx/libdlbvolaidl.so;DISABLE_DEPS
 vendor/lib64/soundfx/libswdapaidl.so;DISABLE_DEPS
 vendor/lib64/soundfx/libswgamedapaidl.so;DISABLE_DEPS
-vendor/lib64/soundfx/libswspatializeraidl.so;DISABLE_DEPS
-vendor/lib64/libspatializerparamstorage.so
+
+# Spatializer from mumba WWAAS36V.48-12-ST12.1
+vendor/lib64/soundfx/libswspatializeraidl.so;DISABLE_DEPS|44e390eedfcf8ce46e6cfb8a9537ab32eda6b6bb
+vendor/lib64/libspatializerparamstorage.so|05fd3fda9d6fd165a5ecdddc302f68bb5fc4ab4d
 
 # PASR
 vendor/lib64/vendor.qti.memory.pasrmanager-V1-ndk.so
@@ -1210,6 +1229,7 @@ system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 system_ext/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so
 system_ext/lib64/vendor.qti.qccsyshal_aidl-halimpl.so
 system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
+system_ext/lib64/vendor.qti.qccvndhal_aidl-V2-ndk.so
 
 # QCC (Vendor)
 vendor/bin/qcc-vendor
@@ -1248,6 +1268,9 @@ vendor/lib64/vendor.qti.snapdragonServices.qape-V1-ndk.so
 
 # QCV
 vendor/etc/init/init.qti.qcv.rc
+
+# ATTIQI
+vendor/apex/com.motorola.modules.attiqi-signed.apex
 
 # QMI
 system/etc/sysconfig/qti_whitelist.xml
@@ -1334,7 +1357,7 @@ vendor/etc/init/motorola.hardware.health.storage.service.rc
 vendor/etc/vintf/manifest/motorola.hardware.health.service.xml
 vendor/etc/vintf/manifest/motorola.hardware.health.storage.service.xml
 vendor/lib64/libmotohid.so
-vendor/lib64/motorola.hardware.health.aidl-V1-ndk.so
+vendor/lib64/motorola.hardware.health.aidl-V2-ndk.so
 vendor/lib64/motorola.hardware.health.storage.aidl-V1-ndk.so
 vendor/lib64/motorola.hardware.health.storage@1.0.so
 
@@ -1359,7 +1382,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
 # RIL - system_ext
-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
@@ -1537,9 +1559,12 @@ system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 system_ext/priv-app/ims/ims.apk
 
 # RIL - IMS - system_ext
+system_ext/bin/imsvtdaemon
 system_ext/app/ImsRcsService/ImsRcsService.apk
+system_ext/etc/init/imsvtdaemon.rc
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/etc/permissions/vendor.qti.imsdatachannel.xml
+system_ext/framework/vendor.qti.ImsVtService-java.jar
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar
 system_ext/framework/vendor.qti.ims.datachannelservice-V2-java.jar
@@ -1557,11 +1582,11 @@ system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
 system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar
 system_ext/framework/vendor.qti.imsdatachannel.jar
+system_ext/etc/seccomp_policy/imsvtdaemon.policy
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
-system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
 system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so
@@ -1569,6 +1594,7 @@ system_ext/lib64/vendor.qti.ims.datachannelservice-V2-ndk.so
 system_ext/lib64/vendor.qti.ims.datachannelservice-V3-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+system_ext/lib64/vendor.qti.ImsVtService-ndk.so
 
 # RIL - IMS
 vendor/bin/ims-dataservice-daemon

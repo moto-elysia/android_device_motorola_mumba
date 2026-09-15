@@ -32,6 +32,7 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # NFC
 ro.nfc.port=I2C
+persist.nfc.secure_nfc=true
 
 # Radio
 persist.rild.nitz_long_ons_0=
@@ -51,3 +52,6 @@ telephony.lteOnCdmaDevice=1
 
 # Wi-Fi
 ro.wifi.channels=
+
+# Hw service manager
+hwservicemanager.always_sets_disabled=true
