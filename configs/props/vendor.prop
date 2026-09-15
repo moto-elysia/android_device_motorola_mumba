@@ -13,6 +13,7 @@ audio.offload.video=true
 audio.record.delay=100
 audio.sys.noisy.broadcast.delay=600
 audio.sys.offload.pstimeout.secs=3
+vendor.audio.hal.stubmode=4
 persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.apptype.multirec.enabled=false
@@ -294,6 +295,9 @@ vendor.display.use_smooth_motion=0
 vendor.display.vds_allow_hwc=1
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_logs=0
+
+# HWC
+persist.sys.systemui.disable_hwc_screen_decorations=1
 
 # DPM
 persist.vendor.dpm.feature=1
