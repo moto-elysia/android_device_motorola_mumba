@@ -240,7 +240,6 @@ PRODUCT_PACKAGES += \
     SettingsResMumba \
     TelephonyResMumba \
     DeviceAsWebcamResMumba \
-    NfcResMumba
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
