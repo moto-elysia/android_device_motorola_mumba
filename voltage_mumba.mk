@@ -10,10 +10,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mumba device
 $(call inherit-product, device/motorola/mumba/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Voltage stuff.
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_mumba
+# Device attestation
+PRODUCT_MANUFACTURER_FOR_ATTESTATION := Motorola
+PRODUCT_BRAND_FOR_ATTESTATION :=  Motorola
+PRODUCT_DEVICE_FOR_ATTESTATION :=  mumba
+PRODUCT_NAME_FOR_ATTESTATION := Motorola G57 Power
+PRODUCT_MODEL_FOR_ATTESTATION := mumba
+
+PRODUCT_NAME := voltage_mumba
 PRODUCT_DEVICE := mumba
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := Motorola
